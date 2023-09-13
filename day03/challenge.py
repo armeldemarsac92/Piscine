@@ -1,0 +1,12 @@
+n = int(input("combien de mots voulez vous rechercher"))
+phrase = "thE Cat’s tactic wAS tO surpRISE thE mIce iN tHE gArdeN"
+l =[]
+c = 0
+
+for i in range(n):
+    l.append(input("votre mot"))
+
+for mot in l:
+    c = c + phrase.lower().count(mot.lower())
+
+
