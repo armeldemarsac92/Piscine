@@ -7,6 +7,9 @@ for i in range(n):
     l.append(input("votre mot"))
 
 for mot in l:
-    c = c + phrase.lower().count(mot.lower())
+    c = c + phrase.lower().count(mot.lower()) + phrase.lower().count(mot[::-1].lower())
+
+print(f"Il y a {c} occurences dans la phrase.")
+
 
 
