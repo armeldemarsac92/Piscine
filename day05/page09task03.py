@@ -27,6 +27,7 @@ def finder(name):
 n1 = input("who are you ? : ")
 
 dates = finder(n1)
+print(dates)
 
 i = 0
 
