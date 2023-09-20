@@ -16,13 +16,27 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
 
 
 def decode_morse(morse_code):
-    new_phrase = list(morse_code)
+
+    new_phrase = morse_code.replace("·",".").replace("−","-")
+    print(new_phrase)
     decoded_phrase = []
 
-    for lettre in new_phrase:
-        if lettre == " ":
-            decoded_phrase.append(MORSE_CODE_DICT.values().)
-        else:
-            decoded_phrase.append(MORSE_CODE_DICT[lettre.upper()])
+    for mot in new_phrase.split("   "):
+        for lettre in mot.split(" "):
+
+            for i in MORSE_CODE_DICT.keys():
+
+                if MORSE_CODE_DICT[i] == lettre:
+
+
+                    decoded_phrase.append(i)
+
+
+    decoded_phrase.append(" ")
 
     return "".join(decoded_phrase)
+
+
+
+
+print(decode_morse('.... . -.--   .--- ..- -.. .'))
