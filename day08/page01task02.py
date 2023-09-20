@@ -8,5 +8,5 @@ x = np.arange(0,4)
 # y = x*10+22
 
 plt.plot(x, x*10+22, 'o', color='red')
-plt.grid(True)
-plt.show()
+
+
