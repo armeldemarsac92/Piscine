@@ -9,8 +9,8 @@ def hangman_core(input_word):
 
     points = 0
 
-    yield(' '.join(t_list))
-    yield("/ 0 point")
+    print(' '.join(t_list), end="")
+    print("/ 0 point")
 
     while points < 8:
 
@@ -20,7 +20,7 @@ def hangman_core(input_word):
 
 
             if lettre.lower() == word.lower():
-                yield (f"Bravo vous avez réussi ! Le mot était {word.capitalize()}.")
+                print(f"Bravo vous avez réussi ! Le mot était {word.capitalize()}.")
                 break
 
             n = 0
@@ -35,26 +35,26 @@ def hangman_core(input_word):
                     n += 1
 
             if lettre.lower() not in w_list:
-                yield ("sheh !")
+                print("sheh !")
                 points += 1
 
             if "_ " not in t_list:
-                yield(f"Bravo vous avez réussi ! Le mot était {word.capitalize()}.")
+                print(f"Bravo vous avez réussi ! Le mot était {word.capitalize()}.")
                 break
 
 
-            yield(' '.join(t_list))
+            print(' '.join(t_list), end="")
             if points <2 :
-                yield(f"/ {points} point")
+                print(f"/ {points} point")
             else :
-                yield(f"/ {points} points")
+                print(f"/ {points} points")
 
         else :
-            yield("Seul les lettres sont autorisées...")
+            print("Seul les lettres sont autorisées...")
 
 
     if points == 8 :
-        yield(f"Miskine tu as perdu. Le mot était {word.capitalize()}.")
+        print(f"Miskine tu as perdu. Le mot était {word.capitalize()}.")
 
-    # yield("_ "*len(word)+ "/ " + f"{points} point", end="")
+    # print("_ "*len(word)+ "/ " + f"{points} point", end="")
 
