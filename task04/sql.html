@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CodingPedia</title>
+</head>
+<body>
+<header>
+    <h1>CodingPedia</h1>
+        <ul>
+        <li><a href="index.html">Index</a></li>
+        <li><a href="php.html">php</a></li>
+        <li><a href="sql.html">SQL</a></li>
+        </ul>
+</header>
+<main>
+    <article>
+        <abbr title="Short description of SQL">Sigle pour Structured Query Language, « langage de requêtes structurées »)<br>
+        est un langage informatique normalisé servant à exploiter des bases de données relationnelles.<br>
+        La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier<br>
+        ou de supprimer des données dans les bases de données relationnelles.</abbr>                
+    </article>  
+    <article>
+        <table>
+            <caption>Course planning</caption>
+            <tr>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Garde obtained</th>
+            </tr>
+            <tr>
+                <td>SQL 101</td>
+                <td>A quick Introduction to the SQL language</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>SQL join</td>
+                <td>Discovery of JOIN to combine rows from multiple tables</td>
+                <td>13</td>
+            </tr>
+        </table>
+    </article>
+    <article>
+        <ul>
+            <li>Quite useful votre large datasets</li>
+            <li>Avoid creating more than 20 columns</li>
+            <li>Relationnal datasets</li>
+        </ul>
+    </article>
+    <article>
+        <p>SELECT<br> 
+        employee_id,<br>
+        last_name,<br>
+        first_name,<br>
+        salary,<br>
+        RANK() OVER (ORDER BY salary DESC) as ranking<br>
+        FROM employee<br>
+        ORDER BY ranking<br></p>
+    </article>
+	<aside>
+    <figure>
+        <blockquote>
+            <p>Peace is a lie, there is only passion.<br>
+                Through passion, I gain strength.<br>
+                Through strength, I gain power.<br>
+                Through power, I gain victory.<br>
+                Trough victory, my chains are broken.<br>
+                The Force shall free me.<br>
+                <cite>Sith Code</cite>
+            </p>
+        </blockquote>
+    </figure>    
+    </aside>
+</main>
+</body>
+<footer>
+        <address>Armel Tandeau de Marsac<br>
+        19 rue du docteur paul jaul 92190 Meudon<br>
+        07.76.80.83.64
+
+        </adress>
+</html>
