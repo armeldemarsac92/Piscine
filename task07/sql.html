@@ -2,11 +2,12 @@
 <html>
 <head>
 <title>CodingPedia</title>
+<link rel="stylesheet" href="codingpedia.css">
 </head>
 <body>
-<header>
+<header class="box">
     <h1>CodingPedia</h1>
-    <nav>
+    <nav class="box">
         <ul>
         <li><a href="index.html">Index</a></li>
         <li><a href="php.html">php</a></li>
@@ -14,12 +15,12 @@
         </ul>
     </nav>
 </header>
-<main>
+<main class="box">
     <article>
-        <abbr title="Short description of PHP">PHP: Hypertext Preprocessor47, plus connu sous son sigle<br>
-            PHP (sigle auto-référentiel), est un langage de programmation libre48, principalement utilisé<br>
-            pour produire des pages Web dynamiques via un serveur web47, mais pouvant également fonctionner<br>
-            comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet.</abbr>                
+        <abbr title="Short description of SQL">Sigle pour Structured Query Language, « langage de requêtes structurées »)<br>
+        est un langage informatique normalisé servant à exploiter des bases de données relationnelles.<br>
+        La partie langage de manipulation des données de SQL permet de rechercher, d'ajouter, de modifier<br>
+        ou de supprimer des données dans les bases de données relationnelles.</abbr>                
     </article>  
     <article>
         <table>
@@ -30,40 +31,36 @@
                 <th>Garde obtained</th>
             </tr>
             <tr>
-                <td>PHP 101</td>
-                <td>Introduction to the language and syntax</td>
-                <td>15</td>
+                <td>SQL 101</td>
+                <td>A quick Introduction to the SQL language</td>
+                <td>18</td>
             </tr>
             <tr>
-                <td>OOP in PHP</td>
-                <td>How to do Object-Oriented Progamming in PHP</td>
-                <td>-</td>
+                <td>SQL join</td>
+                <td>Discovery of JOIN to combine rows from multiple tables</td>
+                <td>13</td>
             </tr>
         </table>
     </article>
     <article>
         <ul>
-            <li>Backbone of any website</li>
-            <li>Very verbous</li>
-            <li>Nice to learn</li>
+            <li>Quite useful votre large datasets</li>
+            <li>Avoid creating more than 20 columns</li>
+            <li>Relationnal datasets</li>
         </ul>
     </article>
     <article>
-        <p>?php<br>
-        // prints: mysql link<br>
-        $c = mysql_connect();<br>
-        echo get_resource_type($c) . "\n";<br>
-        <br>
-        // prints: stream<br>
-        $fp = fopen("foo", "w");<br>
-        echo get_resource_type($fp) . "\n";<br>
-        <br>
-        // prints: domxml document<br>
-        $doc = new_xmldoc("1.0");<br>
-        echo get_resource_type($doc->doc) . "\n";<br></p>
+        <p>SELECT<br> 
+        employee_id,<br>
+        last_name,<br>
+        first_name,<br>
+        salary,<br>
+        RANK() OVER (ORDER BY salary DESC) as ranking<br>
+        FROM employee<br>
+        ORDER BY ranking<br></p>
     </article>
-    </main> 
-	<aside>
+</main>
+	<aside class="box">
     <figure>
         <blockquote>
             <p>Peace is a lie, there is only passion.<br>
@@ -78,7 +75,7 @@
     </figure>    
     </aside>
 </body>
-<footer>
+<footer class="box">
         <address>Armel Tandeau de Marsac<br>
         19 rue du docteur paul jaul 92190 Meudon<br>
         07.76.80.83.64
