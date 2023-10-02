@@ -1,4 +1,4 @@
-export function range(start, end, step=1){
+function range(start, end, step=1){
     let rng = []
     if (Number.isInteger(start) && Number.isInteger(end) && Number.isInteger(step)){
         if ((start < end)&&(step>0)){
@@ -26,3 +26,4 @@ export function range(start, end, step=1){
     }   
 
 }
+module.export = {range}
