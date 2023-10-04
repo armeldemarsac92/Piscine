@@ -30,3 +30,24 @@ button[0].addEventListener("click",()=>{
         console.log(option);
     }
 });
+
+
+button[1].addEventListener("click",()=>{
+    if (menu.querySelector("newDiv")){
+        list = menu.querySelector("ul")
+        console.log("click")
+        let option2 = document.getElementById("dropdown2").value;
+        let elementsToHide = list.querySelectorAll(`:not([class=${option2}])`);
+        console.log(elementsToHide);
+        elementsToHide.forEach(element=>{
+            if (element.hidden === false){
+                element.hidden = true;
+                button[1].textContent = "reset"
+            } else {
+                element.hidden = false;
+                button[1].textContent = "Search"
+            }
+        })
+        console.log(option2);
+    }
+})
