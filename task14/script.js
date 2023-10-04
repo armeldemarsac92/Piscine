@@ -69,10 +69,20 @@ button[0].addEventListener("click",()=>{
         if (!menu.querySelector("newDiv")){
             newDiv = addElement("newDiv","box",menu);
             let ul = addElement("ul",undefined,newDiv);
-            addElement("li",option,ul,input);
+            let li = addElement("li",option,ul);
+            let div1 = addElement("div",`header-${option}`,li)
+            addElement("p","cards-text",div1,option)
+            let div2 = addElement("div",undefined,li)
+            addElement("p","cards-text",div2,input)
+
+            
         } else{
             let ul = newDiv.querySelector("ul");
-            addElement("li",option,ul,input);
+            let li = addElement("li",option,ul);
+            let div1 = addElement("div",`header-${option}`,li)
+            addElement("p","cards-text",div1,option)
+            let div2 = addElement("div",undefined,li)
+            addElement("p","cards-text",div2,input)
         }
         console.log(option);
     }

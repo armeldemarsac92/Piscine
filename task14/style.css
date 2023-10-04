@@ -16,9 +16,67 @@ body{
 }
 
 li{
-    width: fit-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+    .cards-text{
+        margin: 10px;
+    }
+
+    .header-email{
+        background-color: #698F3F;
+        color: white;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+        padding: 0px;
+        text-transform: capitalize;
+        font-weight:700;
+        width: 100%;
+    }
+
+
+    .header-note{
+        background-color: #190E4F;
+        color: white;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+        padding: 0px;
+        text-transform: capitalize;
+        font-weight:700;
+        width: 100%;
+    }
+
+    .header-todo{
+        background-color: #C1292E;
+        color: white;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+        padding: 0px;
+        text-transform: capitalize;
+        font-weight:700;
+        width: 100%;
+    }
+
+    .note{
+        border: solid #190E4F 1px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    .email{
+        border: solid #698F3F 1px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    .todo{
+        border: solid #C1292E 1px;
+        border-radius: 10px;
+        margin: 5px;
+    }
 
 .container{
     height: 50%;
@@ -77,26 +135,6 @@ h2{
     font-weight: bold;
 }
 
-.note{
-    border: solid blue 1px;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-}
-
-.email{
-    border: solid green 1px;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-}
-.todo{
-    border: solid red 1px;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-}
-
 .box{
     border-radius: 10px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -135,7 +173,7 @@ select{
 
 button{
     border-radius: 10px;
-    background-color: green;
+    background-color: #698F3F;
     color: white;
     padding: 5px;
     padding-left: 10px;
