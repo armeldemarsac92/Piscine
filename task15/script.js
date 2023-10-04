@@ -65,6 +65,8 @@ button[0].addEventListener("click",()=>{
     let option = document.getElementById("dropdown1").value;
     let input = document.querySelector("input").value;
     let newDiv = document.querySelector("newDiv");
+    let tags = document.getElementById("tags").value.split(",");
+    console.log(tags)
     if (input != ""){
         if (!menu.querySelector("newDiv")){
             newDiv = addElement("newDiv","box",menu);
@@ -74,6 +76,10 @@ button[0].addEventListener("click",()=>{
             addElement("p","cards-text",div1,option)
             let div2 = addElement("div",undefined,li)
             addElement("p","cards-text",div2,input)
+            let div3 = addElement("div",`footer-${option}`,li)
+            tags.forEach(tag=>{
+                addElement("p","tag",div3,tag)
+            })
 
             
         } else{
@@ -83,6 +89,10 @@ button[0].addEventListener("click",()=>{
             addElement("p","cards-text",div1,option)
             let div2 = addElement("div",undefined,li)
             addElement("p","cards-text",div2,input)
+            let div3 = addElement("div",`footer-${option}`,li)
+            tags.forEach(tag=>{
+                addElement("p","tag",div3,tag)
+            })
         }
         console.log(option);
     }
