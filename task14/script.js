@@ -105,8 +105,8 @@ button[2].addEventListener("click",()=>{
                 });
             console.log(elementsToHide);
             elementsToHide.forEach(element=>{
-                if (element.hidden === false){
-                    element.hidden = true;
+                if (element.style.display === ""){
+                    element.style.display = "none";
                 } 
             })
         }
@@ -122,8 +122,8 @@ button[2].addEventListener("click",()=>{
                 });
             console.log(elementsToHide);
             elementsToHide.forEach(element=>{
-                if (element.hidden === false){
-                    element.hidden = true;
+                if (element.style.display === ""){
+                    element.style.display = "none";
                 } 
             })
         }
@@ -139,8 +139,8 @@ button[2].addEventListener("click",()=>{
                 });
             console.log(elementsToHide);
             elementsToHide.forEach(element=>{
-                if (element.hidden === false){
-                    element.hidden = true;
+                if (element.style.display === ""){
+                    element.style.display = "none";
                 } 
             })
         }
@@ -174,7 +174,7 @@ button[1].addEventListener("click", () => {
 button[3].addEventListener("click",()=>{
     let elementsToHide = Array.from(list.querySelectorAll("li"));
     elementsToHide.forEach(element=>{
-        element.hidden = false;
+        element.style.display="";
     });
     document.getElementById("search1").value = "";
 });
