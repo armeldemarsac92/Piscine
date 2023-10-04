@@ -79,7 +79,7 @@ li{
     }
 
 .container{
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
