@@ -3,15 +3,19 @@ let button = document.querySelectorAll("button")
 let searchField = document.getElementById("search field")
 let dropdownField = document.getElementById("dropdown field")
 let searchParameter = 1
+let count = 0
 
 
-function addElement(tag, style,parent,text){
+function addElement(tag, style,parent,text,id){
     let newElement = document.createElement(tag);
     if (style) {
         newElement.className = style;
     }
     if (text) {
         newElement.innerHTML = text;
+    }
+    if (id) {
+        newElement.id = id
     }
     parent.appendChild(newElement)
     return newElement
@@ -66,35 +70,50 @@ button[0].addEventListener("click",()=>{
     let input = document.querySelector("input").value;
     let newDiv = document.querySelector("newDiv");
     let tags = document.getElementById("tags").value.split(",");
+    let menuTags = document.getElementById("dropdown3")
+  
     console.log(tags)
     if (input != ""){
-        if (!menu.querySelector("newDiv")){
-            newDiv = addElement("newDiv","box",menu);
-            let ul = addElement("ul",undefined,newDiv);
-            let li = addElement("li",option,ul);
-            let div1 = addElement("div",`header-${option}`,li)
-            addElement("p","cards-text",div1,option)
-            let div2 = addElement("div",undefined,li)
-            addElement("p","cards-text",div2,input)
-            let div3 = addElement("div",`footer-${option}`,li)
-            tags.forEach(tag=>{
-                addElement("p","tag",div3,tag)
-            })
-
-            
-        } else{
-            let ul = newDiv.querySelector("ul");
-            let li = addElement("li",option,ul);
-            let div1 = addElement("div",`header-${option}`,li)
-            addElement("p","cards-text",div1,option)
-            let div2 = addElement("div",undefined,li)
-            addElement("p","cards-text",div2,input)
-            let div3 = addElement("div",`footer-${option}`,li)
-            tags.forEach(tag=>{
-                addElement("p","tag",div3,tag)
-            })
+        console.log(menuTags.value)
+        if (menuTags.value === "current"){
+            count++
+            if (!menu.querySelector("newDiv")){
+                newDiv = addElement("newDiv","box",menu);
+                let ul = addElement("ul",undefined,newDiv);
+                let li = addElement("li",option,ul,undefined,`Cardno${count}`);
+                let div1 = addElement("div",`header-${option}`,li)
+                addElement("p","cards-text",div1,option)
+                let div2 = addElement("div",undefined,li)
+                addElement("p","cards-text",div2,input)
+                let div3 = addElement("div",`footer-${option}`,li,undefined,"footer")
+                addElement("option",undefined,menuTags,`Cardno${count}`)
+                tags.forEach(tag=>{
+                    addElement("p","tag",div3,tag)
+                })
+    
+                
+            } else{
+                let ul = addElement("ul",undefined,newDiv);
+                let li = addElement("li",option,ul,undefined,`Cardno${count}`);
+                let div1 = addElement("div",`header-${option}`,li)
+                addElement("p","cards-text",div1,option)
+                let div2 = addElement("div",undefined,li)
+                addElement("p","cards-text",div2,input)
+                let div3 = addElement("div",`footer-${option}`,li,undefined,"footer")
+                addElement("option",undefined,menuTags,`Cardno${count}`)
+                tags.forEach(tag=>{
+                    addElement("p","tag",div3,tag)
+                })
+            }
+            console.log(option); 
+        } else {
+            let cardEdit = document.querySelector(`#${menuTags.value}`)
+            let oldTags = cardEdit.querySelector("#footer")
+                tags.forEach(tag=>{
+                    addElement("p","tag",oldTags,tag)
+                })
         }
-        console.log(option);
+  
     }
 });
 
