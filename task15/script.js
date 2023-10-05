@@ -128,7 +128,7 @@ button[2].addEventListener("click",()=>{
             /*here we check for the input and define it as searchExpression*/
             let searchExpression = document.getElementById("search1").value;
             /*we then create a list matching the above parameters*/
-            let elementsToHide = Array.from(list.querySelectorAll("li"))
+            let elementsToHide = Array.from(document.querySelectorAll("li"))
                 .filter(element => {
                     return !element.classList.contains(option2) || !element.textContent.includes(searchExpression);
                 });
@@ -145,7 +145,7 @@ button[2].addEventListener("click",()=>{
             /*here we check for the input and define it as searchExpression*/
             let searchExpression = document.getElementById("search1").value;
             /*we then create a list matching the above parameters*/
-            let elementsToHide = Array.from(list.querySelectorAll("li"))
+            let elementsToHide = Array.from(document.querySelectorAll("li"))
                 .filter(element => {
                     return !element.textContent.includes(searchExpression);
                 });
@@ -162,7 +162,7 @@ button[2].addEventListener("click",()=>{
             /*here the code checks the dropdown value*/
             let option2 = document.getElementById("dropdown2").value;
             /*we then create a list matching the above parameters*/
-            let elementsToHide = Array.from(list.querySelectorAll("li"))
+            let elementsToHide = Array.from(document.querySelectorAll("li"))
                 .filter(element => {
                     return !element.classList.contains(option2);
                 });
@@ -202,7 +202,7 @@ button[1].addEventListener("click", () => {
 });
 
 button[3].addEventListener("click",()=>{
-    let elementsToHide = Array.from(list.querySelectorAll("li"));
+    let elementsToHide = Array.from(document.querySelectorAll("li"));
     elementsToHide.forEach(element=>{
         element.style.display="";
     });
