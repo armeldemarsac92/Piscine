@@ -13,7 +13,7 @@
             echo "Hi, I have no name and I’m $age years old.";
         } 
         else {
-            echo "I don't know who I am";
+            echo "I don't know who I am.";
         } 
     }
 
