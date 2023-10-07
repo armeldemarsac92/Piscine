@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container center column">
+    <div class="container row center">
+        <div class="container column center fit">
+            <div class="box" id="name_box">
+                    <fieldset class=" column center">
+                        <p class="padding-10">Your name</p>
+                        <input class="padding-10" type="text" name="name" id="name_1" placeholder="Enter your name">
+                        <input class="padding-10" type="text" name="email" id ="email_1" placeholder="Enter your email"></input>
+                        <button type = "input" id="button_1">Submit</button>
+                    </fieldset>
+            </div>
+        </div>
+        <div class="container column center fit">
+            <div class="box column center" id="countries_box">
+                <p class="padding-10">Countries</p>
+                <div class="container row center scroll">
+                    <div class="container column fit" id="country_name">
+                    </div>
+                    <div class="container column fit" id="country_id">
+                    </div>
+                </div>
+                <button id="button_2">Load countries</button>
+            </div>
+        </div>
+    </div>
+<script>
+    const nameBox = document.getElementById("name_box");
+    const loadButton = document.getElementById("button_2");
+    const submitButton = document.getElementById("button_1");
+    const boxCountryName = document.getElementById("country_name");
+    const boxCountryId = document.getElementById("country_id");
+
+    function addElement(tag, style,parent,text,id){
+    let newElement = document.createElement(tag);
+    if (style) {
+        newElement.className = style;
+    }
+    if (text) {
+        newElement.innerHTML = text;
+    }
+    if (id) {
+        newElement.id = id
+    }
+    parent.appendChild(newElement)
+    return newElement
+    };
+
+    document.addEventListener("DOMContentLoaded", (setCountriesContainerWidth) =>{
+        const nameBoxWidth = window.getComputedStyle(nameBox).width;
+        const nameBoxHeight = window.getComputedStyle(nameBox).height;
+        const countriesBox = document.getElementById("countries_box");
+        countriesBox.style.minWidth = nameBoxWidth;
+        countriesBox.style.minHeight = nameBoxHeight;
+    })
+    
+    loadButton.addEventListener("click", async (sendrequest) =>{
+        let action = "get_countries"
+        const response1 = await fetch(`task03.php?action=${action}`, {
+            method: "GET",
+        });
+        if (response1.status === 200){
+            console.log(response1.statusText);
+            console.log(response1);
+            const responseData = await response1.json();
+            console.log("data" + responseData);
+            let country_index = 0;
+            tableCountryName = addElement("tr", "column left", boxCountryName);
+            tableCountryCode = addElement("tr","column",boxCountryId);
+            Object.keys(responseData).forEach(countryCode => {
+                country_index++
+                let countryName = responseData[countryCode];
+                addElement("td", "country_element", tableCountryName, countryName,`country${country_index}`);
+                addElement("td", "country_element", tableCountryCode, countryCode,`country${country_index}`);
+            })
+        }
+    })
+    
+    submitButton.addEventListener("click", async (sendrequest)=>{
+        let action = "get_personnal_infos";
+        let input = document.getElementById("name_1").value;
+        let email = document.getElementById("email_1").value;
+        const response2 = await fetch(`task03.php?action=${action}&name=${input}&email=${email}`, {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+        });
+        if (response2.status === 200){
+            const responseData = await response2.json();
+            console.log(responseData);
+            console.log(responseData.name);
+            if (responseData.email === true){
+                alert(responseData.name + "\nValid email");
+            }} else {
+            alert("Invalid email");
+        }
+    })
+</script>
+</body>
+</html>
