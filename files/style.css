@@ -41,6 +41,7 @@ input{
 .container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
     .row{
@@ -80,6 +81,10 @@ input{
         max-height: 300px;
         overflow-y: scroll;
 
+    }
+
+    .no-wrap{
+        flex-wrap: nowrap;
     }
 
 .country_element{
