@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container center column">
+    <div class="container row center">
+        <div class="container column center">
+            <div class="box">
+                    <fieldset class=" column center">
+                        <p class="padding-10">Your name</p>
+                        <input class="padding-10" type="text" name="name" id="name_1" placeholder="Enter your name">
+                        <p class="padding-10" type="text" name="email" id ="email_1" placeholder="Enter your email"></p>
+                        <button type = "input" id="button_1">Submit</button>
+                    </fieldset>
+            </div>
+        </div>
+    </div>
+<script>
+    const submit_button = document.getElementById("button_1");
+    submit_button.addEventListener("click", async (sendrequest)=>{
+        let input = document.getElementById("name_1").value;
+        const response = await fetch(`task01.php?name=${input}`, {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+        });
+        if (response.status === 200){
+            
+            const responseData = await response.json();
+            console.log(responseData);
+            console.log(responseData.name)
+            alert(responseData.name);
+        } else {
+            console.error("Response error.")
+        }
+    })
+</script>
+</body>
+</html>
