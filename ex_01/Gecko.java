@@ -1,6 +1,6 @@
 // package ex_01;
 public class Gecko{
-    Gecko(){
+    public Gecko(){
         System.out.println("Hello!");
     }
     public static void main ( String [] args ) {

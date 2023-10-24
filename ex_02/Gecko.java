@@ -1,11 +1,11 @@
 // package ex_02;
 public class Gecko{
     String name;
-    Gecko(){
+    public Gecko(){
         name = "Unknown";
         System.out.println("Hello!");
     }
-    Gecko(String name){
+    public Gecko(String name){
         this.name = name;
         System.out.println("Hello " + this.name + "!");
     }

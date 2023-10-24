@@ -3,11 +3,11 @@
 public class Gecko {
     private String name;
     private Integer age;
-    Gecko(){
+    public Gecko(){
         name = "Unknown";
         System.out.println("Hello!");
     }
-    Gecko(String name, Integer age){
+    public Gecko(String name, Integer age){
         this.name = name;
         this.age = age;
         System.out.println("Hello " + this.name + "!");
