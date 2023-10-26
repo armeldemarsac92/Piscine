@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+a{
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu-item{
+  color: #001C55;
+}
+
+.menu-item.active{
+  color:#FF9F1C
+}
+
+header{
+    background-color: white;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-bottom: 10px;    
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px;
+  font-size: 150px;
+
+}
+
+h2{
+  font-size: 20px;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+h3{
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+body{
+    font-family: 'Martian Mono', monospace;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #001C55;
+    background-image: url("../assets/winter-light-blue-gradient-vector-background_53876-126054.jpg");
+    background-size: cover;
+}
+
+.outer-wrapper{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    -webkit-perspective: 50px;
+}
+
+.wrapper{
+    width: 300vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    z-index: 8;
+    display: flex;
+    flex-direction: row;
+    transform-style: preserve-3d;
+}
+
+.slide{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;   
+}
+
+.container{
+  width: fit-content;
+  height: 100vh;
+
+}
+
+.padded{
+  padding: 20px;
+}
+
+.adapt{
+  height: fit-content;
+}
+
+.full{
+  width: 100vw;
+}
+
+.half{
+  width: 50vw;
+}
+
+.small{
+  width: 20%;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.y-center{
+  align-items: center;
+}
+
+.x-center{
+  justify-content: center;
+}
+
+.x-left{
+  justify-content: flex-start;
+}
+
+.y-left{
+  align-content: flex-start;
+}
+
+.y-top{
+  justify-content: flex-start;
+}
+
+.x-left-self{
+  justify-self: flex-start ;
+}
+
+.blue{
+  width: 400px;
+  height: 100vh;
+  background-color: #001C55;
+  z-index: 5;
+}
+
+.yellow{
+  width: 400px;
+  height: 100vh;
+  background-color: #FF9F1C;
+  z-index: 5;
+}
+
+.light{
+  width: 200px;
+  height: 100vh;
+  background-color: #A6E1FA;
+  z-index: 7;
+}
+
+.blur{
+  width: 400px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+      box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box{
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.picture{
+  background-image: url("../assets/800px-Sea_Otter_\(Enhydra_lutris\)_\(25169790524\)_crop.jpg");
+  background-size: cover;
+  background-repeat: no repeat;
+  width: 200px;
+  height: 250px;
+}
+
+
+  
+  .layer1 {
+    transform: translateZ(15px);
+    scale: 2;
+    z-index: 5;
+    position: absolute;
+  }
+  
+  .layer2 {
+    transform: translateZ(-5px);
+    z-index: 4;
+    position: absolute;
+  }
+  
+  .layer3 {
+    transform: translateZ(-10px);
+    z-index: 3;
+    position: absolute;
+  }
+
+  .one{
+
+  }
+
+  .two{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .three{
+
+  }
+
+  .four{
+
+  }
+
+.white-text{
+  color: white;
+}
