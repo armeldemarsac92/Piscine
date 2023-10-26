@@ -1,6 +1,6 @@
 # 📘 Chroniques de la Piscine Epitech
 
-Bienvenue dans ce répertoire, qui témoigne de mon passage à travers la renommée "piscine" d'Epitech. Durant ces quatre mois intenses, j'ai navigué profondément dans le monde du code, et ce que vous voyez ici est le résultat de cette quête.
+Bienvenue dans ce répertoire, qui témoigne de mon passage à travers la renommée "piscine" d'Epitech. Durant ces quatre mois intenses, je navigue profondément dans le monde du code, et ce que vous voyez ici est le résultat de cette quête.
 
 ## 🛠 La Stack Technologique
 
