@@ -1,0 +1,29 @@
+header{
+    background-color: cyan;
+    height: 50px;
+    margin: 5px 0 5px 0;
+}
+
+footer{
+    background-color: red;
+    height: 50px;
+    margin: 5px 0 5px 0;
+}
+
+section:nth-of-type(1) {
+    background-color: greenyellow;
+    height: 120px;
+    margin: 5px 0 5px 0;
+}
+
+article:nth-child(1){
+    background-color: yellow;
+    height: 110px;
+    margin: 5px 0 5px 0;
+}
+
+article:nth-child(2){
+    background-color: yellow;
+    height: 110px;
+    margin: 5px 0 5px 0;
+}
