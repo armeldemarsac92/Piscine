@@ -1,4 +1,3 @@
-package animal;
 public class Canary extends Animal{
 
     private Integer eggs;

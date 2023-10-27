@@ -1,5 +1,3 @@
-package animal;
-
 public class Animal{
     protected enum Type {
         MAMMAL, FISH, BIRD
