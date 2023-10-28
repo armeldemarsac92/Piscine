@@ -1,12 +1,12 @@
 public interface Fighter {
 
-    public boolean equip(Weapon weapon);
+    public Boolean equip(Weapon weapon);
 
-    public boolean attack(Fighter opponent);
+    public Boolean attack(Fighter opponent);
 
     public void receiveDamage(int damage);
     
-    public boolean moveCloseTo(Fighter opponent);
+    public Boolean moveCloseTo(Fighter opponent);
     
     public void recoverAP();
 

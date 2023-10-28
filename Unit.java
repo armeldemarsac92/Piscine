@@ -24,14 +24,7 @@ public abstract class Unit implements Fighter {
         return this.ap;
     }
 
-    public void recoverAP(Integer apPoints){
-        if (this.hp > 0 && apPoints <= 7) {
-            if (this.ap + apPoints > 50){
-                this.ap = 50;
-            } else {
-                this.ap += apPoints;
-            }
-        }
+    public void recoverAP(){ 
     }
 
     public void receiveDamage(Integer damage){
@@ -42,7 +35,7 @@ public abstract class Unit implements Fighter {
         }
     }
 
-    public boolean moveCloseTo(Fighter opponent){
+    public Boolean moveCloseTo(Fighter opponent){
         if (this.hp > 0) {
             if (this == opponent){
             return false;
@@ -56,7 +49,6 @@ public abstract class Unit implements Fighter {
         
 
     }
-
 
     
 }

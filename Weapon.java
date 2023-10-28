@@ -3,7 +3,7 @@ public abstract class Weapon{
     protected Integer apcost;
     protected Integer damage;
     protected boolean melee;
-    static SpaceMarine owner;
+    protected static SpaceMarine owner = null;
 
     protected Weapon(String name, Integer apcost, Integer damage, boolean melee){
         this.name = name;
@@ -27,6 +27,14 @@ public abstract class Weapon{
 
     public boolean isMelee() {
         return melee;
+    }
+
+    public SpaceMarine getOwner(){
+        return this.owner;
+    }
+
+    public static void setOwner(SpaceMarine owner) {
+        Weapon.owner = owner;
     }
 
     public abstract void attack();
