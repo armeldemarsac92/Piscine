@@ -3,12 +3,14 @@ public abstract class Weapon{
     protected Integer apcost;
     protected Integer damage;
     protected boolean melee;
+    static SpaceMarine owner;
 
     protected Weapon(String name, Integer apcost, Integer damage, boolean melee){
         this.name = name;
         this.apcost = apcost;
         this.damage = damage;
         this.melee = melee;
+        this.owner = owner;
     }
 
     public String getName() {

@@ -1,4 +1,6 @@
 public class PlasmaRifle extends Weapon {
+
+
     public PlasmaRifle(){
         super("PlasmaRifle", 5, 21, false);
     }
